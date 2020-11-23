@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Asciidoctor 2.0.12" />
+    <meta name="author" content="Simon Maple, Robert Scholte" />
+    <title>Cheat Sheet: 10 Maven Security Best Practices</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700"
+    />
+    <link rel="stylesheet" href="cheatsheet.css" />
+  </head>
+  <body class="article">
+    <div id="header">
+      <h1>Cheat Sheet: 10 Maven Security Best Practices</h1>
+      <div class="details">
+        <span id="author" class="author">Simon Maple</span><br />
+        <span id="email" class="email"
+          ><a href="https://twitter.com/sjmaple" class="bare"
+            >https://twitter.com/sjmaple</a
+          ></span
+        ><br />
+        <span id="author2" class="author">Robert Scholte</span><br />
+        <span id="email2" class="email"
+          ><a href="https://twitter.com/rfscholte" class="bare"
+            >https://twitter.com/rfscholte</a
+          ></span
+        ><br />
+      </div>
+    </div>
+    <div id="content">
+      <div class="sect1">
+        <h2 id="_encrypt_your_secrets">1. Encrypt your Secrets</h2>
+        <div class="sectionbody">
+          <div class="listingblock">
+            <div class="content">
+              <pre class="highlight"><code>$ mvn --encrypt-master-password
+Master password: *********
+{encrypted_master_password}</code></pre>
+            </div>
+          </div>
+          <div class="paragraph">
+            <p>Store this in <code>~/.m2/settings-security.xml</code></p>
+          </div>
+          <div class="listingblock">
+            <div class="content">
+              <pre
+                class="highlight"
+              ><code class="language-xml" data-lang="xml">&lt;settingsSecurity&gt;
+ &lt;master&gt;{encrypted_master_password}&lt;/master&gt;
+&lt;/settingsSecurity&gt;</code></pre>
+            </div>
+          </div>
+          <div class="paragraph">
+            <p>Now encrypt your server password:</p>
+          </div>
+          <div class="listingblock">
+            <div class="content">
+              <pre class="highlight"><code>mvn --encrypt-password
+Master password: *********
+{encrypted_password}</code></pre>
+            </div>
+          </div>
+          <div class="paragraph">
+            <p>Store this in your <code>settings.xml</code> file as follows:</p>
+          </div>
+          <div class="listingblock">
+            <div class="content">
+              <pre
+                class="highlight"
+              ><code class="language-xml" data-lang="xml">&lt;server&gt;
+ &lt;id&gt;my.server&lt;/id&gt;
+ &lt;username&gt;smaple&lt;/username&gt;
+ &lt;password&gt;{encrypted_password}&lt;/password&gt;
+&lt;/server&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sect1">
+        <h2 id="_dont_use_passwords_in_the_cli">
+          2. Don&#8217;t use passwords in the CLI
+        </h2>
+        <div class="sectionbody">
+          <div class="paragraph">
+            <p>Never enter passwords in plain text on the CLI:</p>
+          </div>
+          <div class="listingblock dont">
+            <div class="content">
+              <pre
+                class="highlight"
+              ><code class="language-sh" data-lang="sh">$ mvn --encrypt-master-password P@ssw0rd
+
+$ mvn --encrypt-password P@ssw0rd</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sect1">
+        <h2 id="_always_use_https">3. Always Use HTTPS</h2>
+        <div class="sectionbody">
+          <div class="paragraph">
+            <p>
+              Use HTTPS to connect to remote Maven repositories, to avoid MITM
+              attacks.
+            </p>
+          </div>
+          <div class="paragraph">
+            <p>
+              Ensure your <code>&lt;repositories&gt;</code> and
+              <code>&lt;pluginRepositories&gt;</code> use https in their URLs.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="sect1">
+        <h2 id="_check_dependency_health">4. Check Dependency Health</h2>
+        <div class="sectionbody">
+          <div class="paragraph">
+            <p>
+              Verify the health of your third-party libraries by confirming they
+              have:
+            </p>
+          </div>
+          <div class="ulist checklist do">
+            <ul class="checklist">
+              <li>
+                <p>&#10003; A team of committers</p>
+              </li>
+              <li>
+                <p>&#10003; Well documented security policies</p>
+              </li>
+              <li>
+                <p>&#10003; Regular updates and releases</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="sect1">
+        <h2 id="_test_for_known_vulnerabilities">
+          5. Test for Known Vulnerabilities
+        </h2>
+        <div class="sectionbody">
+          <div class="paragraph">
+            <p>
+              Do not use Maven dependencies with known vulnerabilities.<br />
+              Use a tool like Snyk to:
+            </p>
+          </div>
+          <div class="ulist checklist do">
+            <ul class="checklist">
+              <li>
+                <p>&#10003; Test your app for known vulnerabilities.</p>
+              </li>
+              <li>
+                <p>&#10003; Automatically fix issues that exist.</p>
+              </li>
+              <li>
+                <p>&#10003; Continuously monitor for new vulnerabilities</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="sect1">
+        <h2 id="_test_your_checksums">6. Test your Checksums</h2>
+        <div class="sectionbody">
+          <div class="paragraph">
+            <p>
+              As part of validating the authenticity of your dependencies, test
+              their checksums using the -C flag on Maven commands:
+            </p>
+          </div>
+          <div class="listingblock">
+            <div class="content">
+              <pre class="highlight"><code>$ mvn -C install
+// fail if checksums don’t match
+
+$ mvn -c install
+// warn if checksums don’t match</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sect1">
+        <h2 id="_dont_use_properties_for_passwords">
+          7. Don&#8217;t use Properties for Passwords
+        </h2>
+        <div class="sectionbody">
+          <div class="paragraph">
+            <p>Never store your secrets in your pom.xml properties.</p>
+          </div>
+          <div class="listingblock dont">
+            <div class="content">
+              <pre
+                class="highlight"
+              ><code class="language-xml" data-lang="xml">&lt;properties&gt;
+  &lt;my.property&gt;P@ssw0rd&lt;/my.property&gt;
+&lt;/properties&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sect1">
+        <h2 id="_use_maven_developersroles">8. Use Maven developers/roles</h2>
+        <div class="sectionbody">
+          <div class="paragraph">
+            <p>
+              Use Maven roles to state who should be contacted for security
+              issues.
+            </p>
+          </div>
+          <div class="listingblock">
+            <div class="content">
+              <pre
+                class="highlight"
+              ><code class="language-xml" data-lang="xml">&lt;developers&gt;
+ &lt;developer&gt;
+   &lt;id&gt;grander&lt;/id&gt;
+   &lt;name&gt;Danny Grander&lt;/name&gt;
+   &lt;email&gt;security@your_org.com&lt;/email&gt;
+   &lt;roles&gt;
+     &lt;role&gt;security&lt;/role&gt;
+   &lt;/roles&gt;
+ &lt;developer&gt;
+&lt;developers&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sect1">
+        <h2 id="_stay_up_to_date">9. Stay up-to-date</h2>
+        <div class="sectionbody">
+          <div class="paragraph">
+            <p>
+              Try to stay on the latest releases of Maven. Check the download
+              page for the latest version.
+            </p>
+          </div>
+          <div class="paragraph">
+            <p>
+              Avoid Maven 3.0.4 as it ignores certificates for HTTPS
+              connections.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="sect1">
+        <h2 id="_check_security_bulletins">10. Check Security Bulletins</h2>
+        <div class="sectionbody">
+          <div class="paragraph">
+            <p>
+              Monitor the security bulletins the Apache Maven team publish on
+              the
+              <a href="https://maven.apache.org/security.html">Maven site</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+      <div id="footer-text">Last updated 2020-11-22 04:45:18 -0800</div>
+    </div>
+  </body>
+</html>

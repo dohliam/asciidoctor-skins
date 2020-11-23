@@ -1,0 +1,25 @@
+= AsciiDoc Docstyle Skins
+Asciidoctor Skins Project
+:icons: font
+:stylesheet: ./document/document.css
+:linkcss:
+
+This is a collection of pre-made Asciidoctor style templates for different types of documents. The core styles are based on https://github.com/Mogztter/asciidoctor-web-pdf[asciidoctor-web-pdf] by @Mogztter, but contributions adding docstyles for other types of documents are welcome! This page uses the basic Document style, which can be viewed link:document/[here].
+
+== Available Styles
+
+* link:book/[Book]
+* link:cheatsheet/[Cheatsheet]
+* link:document/[Document]
+* link:letter/[Letter]
+* link:presentation/[Presentation]
+* link:resume/[Resume]
+* link:resume/[Storybook]
+
+== Bookmarklet
+
+Click or drag +++<a href="javascript:(function()%7Bvar%20body%20%3D%20document.getElementsByTagName('body')%5B0%5D%3Bscript%20%3D%20document.createElement('script')%3Bscript.type%3D%20'text%2Fjavascript'%3Bscript.src%3D%20'https%3A%2F%2Fdohliam.github.io%2Fasciidoctor-skins%2F%2Fdocstyles%2Fswitcher.js'%3Bbody.appendChild(script)%7D)()">this bookmarklet</a>+++ to your bookmark bar to preview these docstyles on any rendered Asciidoctor document.
+
+++++
+<script src="./document/paged.polyfill.min.js"></script>
+++++

@@ -1,0 +1,94 @@
+= Chicken and Millipede
+Winny Asara
+:stylesheet: https://storybookscanada.ca/css/spectre.min.css
+:linkcss:
+:sectanchors:
+
+++++
+<link rel="stylesheet" href="storybook.css">
+++++
+
+[.cover]
+== cover
+image::https://storybookscanada.ca/images/0141/01.jpg[role=cover]
+
+* Written by: Winny Asara
+* Illustrated by: Magriet Brink
+* Level: Level 3
+
+[.page-sections]
+== chapters
+
+=== 2
+image::https://storybookscanada.ca/images/0141/02.jpg[role=page-image]
+
+Chicken and Millipede were friends. But they were always competing with each other. One day they decided to play football to see who the best player was.
+
+=== 3
+image::https://storybookscanada.ca/images/0141/03.jpg[role=page-image]
+
+They went to the football field and started their game. Chicken was fast, but Millipede was faster. Chicken kicked far, but Millipede kicked further. Chicken started to feel grumpy.
+
+=== 4
+image::https://storybookscanada.ca/images/0141/04.jpg[role=page-image]
+
+They decided to play a penalty shoot-out. First Millipede was goal keeper. Chicken scored only one goal. Then it was the chicken's turn to defend the goal.
+
+=== 5
+image::https://storybookscanada.ca/images/0141/05.jpg[role=page-image]
+
+Millipede kicked the ball and scored.
+
+Millipede dribbled the ball and scored. Millipede headed the ball and scored. Millipede scored five goals.
+
+=== 6
+image::https://storybookscanada.ca/images/0141/06.jpg[role=page-image]
+
+Chicken was furious that she lost. She was a very bad loser. Millipede started laughing because his friend was making such a fuss.
+
+=== 7
+image::https://storybookscanada.ca/images/0141/07.jpg[role=page-image]
+
+Chicken was so angry that she opened her beak wide and swallowed the millipede.
+
+=== 8
+image::https://storybookscanada.ca/images/0141/08.jpg[role=page-image]
+
+As Chicken was walking home, she met Mother Millipede. Mother Millipede asked, "Have you seen my child?" Chicken didn't say anything.
+
+Mother Millipede was worried.
+
+=== 9
+image::https://storybookscanada.ca/images/0141/09.jpg[role=page-image]
+
+Then Mother Millipede heard a tiny voice. "Help me mom!" cried the voice. Mother Millipede looked around and listened carefully. The voice came from inside the chicken.
+
+=== 10
+image::https://storybookscanada.ca/images/0141/10.jpg[role=page-image]
+
+Mother Millipede shouted, "Use your special power my child!" Millipedes can make a bad smell and a terrible taste. Chicken began to feel ill.
+
+=== 11
+image::https://storybookscanada.ca/images/0141/11.jpg[role=page-image]
+
+Chicken burped. Then she swallowed and spat. Then she sneezed and coughed. And coughed. The millipede was disgusting!
+
+=== 12
+image::https://storybookscanada.ca/images/0141/12.jpg[role=page-image]
+
+Chicken coughed until she coughed out the millipede that was in her stomach. Mother Millipede and her child crawled up a tree to hide.
+
+=== 13
+image::https://storybookscanada.ca/images/0141/13.jpg[role=page-image]
+
+From that time, chickens and millipedes were enemies.
+
+'''
+
+[.colophon]
+== colophon
+*Source:* https://africanstorybook.org/reader.php?id=9094[Chicken and Millipede] by Winny Asara, with illustrations by Magriet Brink, from the https://africanstorybook.org/[African Storybook]
+
+image::https://i.creativecommons.org/l/by/3.0/88x31.png[Creative Commons License, link="https://creativecommons.org/licenses/by/3.0/"]
+
+This work is licensed under a https://creativecommons.org/licenses/by/3.0/[Creative Commons Attribution 3.0 International License].

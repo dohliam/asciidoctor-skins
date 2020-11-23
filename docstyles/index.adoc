@@ -14,7 +14,7 @@ This is a collection of pre-made Asciidoctor style templates for different types
 * link:letter/[Letter]
 * link:presentation/[Presentation]
 * link:resume/[Resume]
-* link:resume/[Storybook]
+* link:storybook/[Storybook]
 
 == Bookmarklet
 

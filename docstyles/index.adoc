@@ -4,17 +4,17 @@ Asciidoctor Skins Project
 :stylesheet: ./document/document.css
 :linkcss:
 
-This is a collection of pre-made Asciidoctor style templates for different types of documents. The core styles are based on https://github.com/Mogztter/asciidoctor-web-pdf[asciidoctor-web-pdf] by @Mogztter, but contributions adding docstyles for other types of documents are welcome! This page uses the basic Document style, which can be viewed link:document/[here].
+This is a collection of pre-made Asciidoctor style templates for different types of documents. The core styles are based on https://github.com/Mogztter/asciidoctor-web-pdf[asciidoctor-web-pdf,window=_blank] by @Mogztter, but contributions adding docstyles for other types of documents are welcome! This page uses the basic Document style, which can be viewed link:document/[here,window=_blank].
 
 == Available Styles
 
-* link:book/[Book] (https://raw.githubusercontent.com/dohliam/asciidoctor-skins/docstyles-testing/docstyles/book/book.adoc[Source])
-* link:cheatsheet/[Cheatsheet] (https://raw.githubusercontent.com/dohliam/asciidoctor-skins/docstyles-testing/docstyles/cheatsheet/cheatsheet.adoc[Source])
-* link:document/[Document] (https://raw.githubusercontent.com/dohliam/asciidoctor-skins/docstyles-testing/docstyles/document/document.adoc[Source])
-* link:letter/[Letter] (https://raw.githubusercontent.com/dohliam/asciidoctor-skins/docstyles-testing/docstyles/letter/letter.adoc[Source])
-* link:presentation/[Presentation] (https://raw.githubusercontent.com/dohliam/asciidoctor-skins/docstyles-testing/docstyles/presentation/presentation.adoc[Source])
-* link:resume/[Resume] (https://raw.githubusercontent.com/dohliam/asciidoctor-skins/docstyles-testing/docstyles/resume/resume.adoc[Source])
-* link:storybook/[Storybook] (https://raw.githubusercontent.com/dohliam/asciidoctor-skins/docstyles-testing/docstyles/storybook/storybook.adoc[Source])
+* link:book/[Book,window=_blank] (https://raw.githubusercontent.com/dohliam/asciidoctor-skins/docstyles-testing/docstyles/book/book.adoc[Source,window=_blank])
+* link:cheatsheet/[Cheatsheet,window=_blank] (https://raw.githubusercontent.com/dohliam/asciidoctor-skins/docstyles-testing/docstyles/cheatsheet/cheatsheet.adoc[Source,window=_blank])
+* link:document/[Document,window=_blank] (https://raw.githubusercontent.com/dohliam/asciidoctor-skins/docstyles-testing/docstyles/document/document.adoc[Source,window=_blank])
+* link:letter/[Letter,window=_blank] (https://raw.githubusercontent.com/dohliam/asciidoctor-skins/docstyles-testing/docstyles/letter/letter.adoc[Source,window=_blank])
+* link:presentation/[Presentation,window=_blank] (https://raw.githubusercontent.com/dohliam/asciidoctor-skins/docstyles-testing/docstyles/presentation/presentation.adoc[Source,window=_blank])
+* link:resume/[Resume,window=_blank] (https://raw.githubusercontent.com/dohliam/asciidoctor-skins/docstyles-testing/docstyles/resume/resume.adoc[Source,window=_blank])
+* link:storybook/[Storybook,window=_blank] (https://raw.githubusercontent.com/dohliam/asciidoctor-skins/docstyles-testing/docstyles/storybook/storybook.adoc[Source,window=_blank])
 
 == Bookmarklet
 

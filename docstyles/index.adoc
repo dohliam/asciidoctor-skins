@@ -8,13 +8,13 @@ This is a collection of pre-made Asciidoctor style templates for different types
 
 == Available Styles
 
-* link:book/[Book]
-* link:cheatsheet/[Cheatsheet]
-* link:document/[Document]
-* link:letter/[Letter]
-* link:presentation/[Presentation]
-* link:resume/[Resume]
-* link:storybook/[Storybook]
+* link:book/[Book] (https://raw.githubusercontent.com/dohliam/asciidoctor-skins/docstyles-testing/docstyles/book/book.adoc[Source])
+* link:cheatsheet/[Cheatsheet] (https://raw.githubusercontent.com/dohliam/asciidoctor-skins/docstyles-testing/docstyles/cheatsheet/cheatsheet.adoc[Source])
+* link:document/[Document] (https://raw.githubusercontent.com/dohliam/asciidoctor-skins/docstyles-testing/docstyles/document/document.adoc[Source])
+* link:letter/[Letter] (https://raw.githubusercontent.com/dohliam/asciidoctor-skins/docstyles-testing/docstyles/letter/letter.adoc[Source])
+* link:presentation/[Presentation] (https://raw.githubusercontent.com/dohliam/asciidoctor-skins/docstyles-testing/docstyles/presentation/presentation.adoc[Source])
+* link:resume/[Resume] (https://raw.githubusercontent.com/dohliam/asciidoctor-skins/docstyles-testing/docstyles/resume/resume.adoc[Source])
+* link:storybook/[Storybook] (https://raw.githubusercontent.com/dohliam/asciidoctor-skins/docstyles-testing/docstyles/storybook/storybook.adoc[Source])
 
 == Bookmarklet
 
